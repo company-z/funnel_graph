@@ -325,17 +325,20 @@ function () {
         value.textContent = (0, _number.formatNumber)(valueNumber);
         var percentageValue = document.createElement('div');
         percentageValue.setAttribute('class', 'label__percentage');
-
+        var labelValues = document.createElement('div');
+        labelValues.setAttribute('class', 'label__values');
         if (percentage !== 100) {
           percentageValue.textContent = "".concat(percentage.toString(), "%");
         }
 
         labelElement.appendChild(title);
-        labelElement.appendChild(value);
+        labelValues.appendChild(value);
 
         if (_this.displayPercent) {
-          labelElement.appendChild(percentageValue);
+          labelValues.appendChild(percentageValue);
         }
+
+        labelElement.appendChild(labelValues);
 
         if (_this.is2d()) {
           var segmentPercentages = document.createElement('div');
