@@ -1,0 +1,21 @@
+.svg-funnel-js {
+  display: inline-block;
+  position: relative;
+}
+
+.svg-funnel-js svg {
+  display: block;
+}
+
+.svg-funnel-js .svg-funnel-js__labels {
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.svg-funnel-js.svg-funnel-js--vertical .svg-funnel-js__labels {
+  flex-direction: column;
+}
