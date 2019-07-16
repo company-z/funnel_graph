@@ -330,8 +330,8 @@ function () {
           percentageValue.textContent = "".concat(percentage.toString(), "%");
         }
 
-        labelElement.appendChild(value);
         labelElement.appendChild(title);
+        labelElement.appendChild(value);
 
         if (_this.displayPercent) {
           labelElement.appendChild(percentageValue);
