@@ -327,7 +327,9 @@ function () {
         percentageValue.setAttribute('class', 'label__percentage');
         var labelValues = document.createElement('div');
         labelValues.setAttribute('class', 'label__values');
-        if (percentage !== 100) {
+
+        var max = Math.max.apply(Math, _this.values);
+        if (max !== parseInt(valueNumber, 10)) {
           percentageValue.textContent = "".concat(percentage.toString(), "%");
         }
 
