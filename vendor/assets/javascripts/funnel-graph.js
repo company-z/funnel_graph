@@ -454,9 +454,9 @@ function () {
         values = _toConsumableArray(this.values);
       }
 
-      var max = Math.max.apply(Math, _toConsumableArray(values));
-      return values.map(function (value) {
-        return (0, _number.roundPoint)(value * 100 / max);
+      return values.map(function (value, index) {
+        var prev = index > 0 ? values[index - 1] : values[index]
+        return (0, _number.roundPoint)(value * 100 / prev);
       });
     }
   }, {
