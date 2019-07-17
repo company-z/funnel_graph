@@ -327,8 +327,9 @@ function () {
         percentageValue.setAttribute('class', 'label__percentage');
         var labelValues = document.createElement('div');
         labelValues.setAttribute('class', 'label__values');
-
-        percentageValue.textContent = "".concat(percentage.toString(), "%");
+        if (percentage !== 100) {
+          percentageValue.textContent = "".concat(percentage.toString(), "%");
+        }
 
         labelElement.appendChild(title);
         labelValues.appendChild(value);
