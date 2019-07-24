@@ -458,7 +458,12 @@ function () {
 
       return values.map(function (value, index) {
         var prev = index > 0 ? values[index - 1] : values[index]
-        return (0, _number.roundPoint)(value * 100 / prev);
+
+        if (parseFloat(prev) <= 0.0) {
+          return 0
+        }
+
+        return (0, _number.roundPoint)(parseFloat(value) * 100 / parseFloat(prev));
       });
     }
   }, {
